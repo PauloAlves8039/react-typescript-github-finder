@@ -24,7 +24,7 @@ export default function User({ login, avatar_url, followers, following, location
                     <p className={classes.number}>{following}</p>
                 </div>
             </div>
-            <Link to={`/repos${login}`}>Ver melhores projetos</Link>
+            <Link to={`/repos/${login}`}>Ver melhores projetos</Link>
         </div>
     );
 }
