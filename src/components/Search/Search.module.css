@@ -31,3 +31,8 @@
     background-color: var(--green-color1);
     cursor: pointer;
 }
+
+.search_container .clear_button {
+    background-color: var(--danger-color1);
+    cursor: pointer;
+}

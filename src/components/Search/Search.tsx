@@ -1,4 +1,5 @@
 import { BsSearch } from "react-icons/bs";
+import { AiOutlineClear } from "react-icons/ai";
 import { useState, KeyboardEvent } from "react";
 import classes from "./Search.module.css";
 
@@ -20,6 +21,11 @@ export default function Search({loadUser}: SearchProps) {
         setUserName("");
     };
 
+    const resetPage = () => {
+        setUserName("");
+        window.location.reload();
+    };
+
     return (
         <div className={classes.search}>
             <h2>Busque por um usuário:</h2>
@@ -35,8 +41,13 @@ export default function Search({loadUser}: SearchProps) {
                 <button onClick={() => {
                     loadUser(userName);
                     clearSearch();
-                }}>
+                }} title="Pesquisar">
                     <BsSearch />
+                </button>
+                <button onClick={resetPage}
+                    className={classes.clear_button}
+                    title="Limpar">
+                    <AiOutlineClear />
                 </button>
             </div>
         </div>
