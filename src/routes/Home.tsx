@@ -17,7 +17,7 @@ export default function Home() {
 
     if (response.status === 404) {
       setError(true);
-      return;
+      return false;
     }
 
     const { avatar_url, login, location, followers, following } = data;
@@ -31,8 +31,9 @@ export default function Home() {
     };
 
     setUser(userData);
+    return true;
 
-  }
+  };
 
   return (
     <div>

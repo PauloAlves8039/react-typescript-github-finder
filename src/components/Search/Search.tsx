@@ -1,20 +1,30 @@
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineClear } from "react-icons/ai";
 import { useState, KeyboardEvent } from "react";
+import { SearchProps } from "../../types/SearchProps";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import classes from "./Search.module.css";
 
-type SearchProps = {
-    loadUser: (userName: string) => Promise<void>;
-};
 
 export default function Search({loadUser}: SearchProps) {
     const [ userName, setUserName ] = useState("");
     
     const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === "Enter") {
-            loadUser(userName);
-            clearSearch();
+            handleSearch();
         }
+    };
+
+    const handleSearch = () => {
+        loadUser(userName).then((found) => {
+            if (found) {
+                toast.success("Usuário encontrado!", { autoClose: 3000 });
+            } else {
+                toast.error("Usuário não encontrado!", { autoClose: 3000 });
+            }
+            clearSearch();
+        });
     };
 
     const clearSearch = () => {
@@ -38,10 +48,7 @@ export default function Search({loadUser}: SearchProps) {
                     onChange={(e) => setUserName(e.target.value)}
                     onKeyDown={handleKeyDown} 
                 />
-                <button onClick={() => {
-                    loadUser(userName);
-                    clearSearch();
-                }} title="Pesquisar">
+                <button onClick={handleSearch} title="Pesquisar">
                     <BsSearch />
                 </button>
                 <button onClick={resetPage}

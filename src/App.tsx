@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import classes from "./App.module.css";
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         </h1>
         < Outlet />
       </div>
+      <ToastContainer autoClose={3000} />
     </>
   );
 }
