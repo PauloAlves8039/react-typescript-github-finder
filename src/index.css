@@ -5,7 +5,6 @@
     --gray-color1: #9FA1AA;
     --gray-color2: #444A69;
     --purple-color1: #5E47F5;
-    --purple-color2: #BABCF5;
     --success-color1: #07C1FA;
     --green-color1: #1AA11A;
     --green-color2: #31AF31;
@@ -31,4 +30,14 @@ p {
 
 a {
     text-decoration: none;
+}
+
+.animation-bounce-in-1s {
+    animation: bounceIn;
+    animation-duration: 1s;
+}
+
+.animation-fade-in-downbig-1s {
+    animation: fadeInDownBig;
+    animation-duration: 1s;
 }

@@ -7,7 +7,7 @@ export default function App() {
   return (
     <>
       <div className={classes.app}>
-        <h1>
+        <h1 className="animation-bounce-in-1s">
           <FaGithub className={classes.github_icon} /> GitHub Finder
         </h1>
         < Outlet />

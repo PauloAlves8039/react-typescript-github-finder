@@ -41,27 +41,29 @@ export default function ListRepository() {
   if (error) return <p className={classes.error}>{error}</p>;
 
   return (
-    <div className={classes.repository_container}>
-      <h2>Repositórios de {username}</h2>
-      <div className={classes.repo_list}>
-        {repos.map((repo) => (
-          <div key={repo.name} className={classes.repo_card}>
-            <h3>{repo.name}</h3>
-            <p>{repo.description || "Sem descrição disponível"}</p>
-            <div className={classes.repo_info}>
-              <span><FaStar /> {repo.stargazers_count}</span>
-              <span><FaCodeBranch /> {repo.forks_count}</span>
+    <div className="animation-fade-in-downbig-1s">
+      <div className={classes.repository_container}>
+        <h2>Repositórios de {username}</h2>
+        <div className={classes.repo_list}>
+          {repos.map((repo) => (
+            <div key={repo.name} className={classes.repo_card}>
+              <h3>{repo.name}</h3>
+              <p>{repo.description || "Sem descrição disponível"}</p>
+              <div className={classes.repo_info}>
+                <span><FaStar /> {repo.stargazers_count}</span>
+                <span><FaCodeBranch /> {repo.forks_count}</span>
+              </div>
+              <a
+                href={repo.html_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Acessar repositório ${repo.name}`}
+              >
+                Visitar <FaExternalLinkAlt />
+              </a>
             </div>
-            <a 
-              href={repo.html_url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label={`Acessar repositório ${repo.name}`}
-            >
-              Visitar <FaExternalLinkAlt />
-            </a>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       <button className={classes.scroll_top} onClick={scrollToTop} aria-label="Voltar ao topo">

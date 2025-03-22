@@ -16,7 +16,7 @@
 }
 
 .repo_card {
-    background-color: var(--purple-color2);
+    background-color: var(--success-color1);
     border-radius: 0.5rem;
     padding: 1.5rem;
     width: 100%; 
