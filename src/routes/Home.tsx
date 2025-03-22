@@ -1,18 +1,18 @@
 import Search from "../components/Search/Search";
 import { useState } from "react";
 import { UserProps } from "../types/user";
+import { BASE_URL } from "../config/constants";
 import User from "../components/User/User";
 import Error from "../components/Error/Error";
 
 export default function Home() {
   const [ user, setUser ] = useState<UserProps | null>(null);
   const [ error, setError ] = useState(false);
-  const url: string = "https://api.github.com/users/";
 
   const loadUser = async(userName: string) => {
     setError(false);
     setUser(null);
-    const response = await fetch(`${url}${userName}`);
+    const response = await fetch(`${BASE_URL}${userName}`);
     const data = await response.json();
 
     if (response.status === 404) {

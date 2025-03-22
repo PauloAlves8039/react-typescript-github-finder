@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { FaStar, FaCodeBranch, FaExternalLinkAlt, FaArrowUp, FaArrowLeft } from "react-icons/fa";
+import { FaStar, 
+         FaCodeBranch, 
+         FaExternalLinkAlt, 
+         FaArrowUp, 
+         FaArrowLeft 
+} from "react-icons/fa";
 import { Repo } from "../../types/Repo"; 
+import { BASE_URL } from "../../config/constants";
 import classes from "./ListRepository.module.css";
 
 export default function ListRepository() {
@@ -13,7 +19,7 @@ export default function ListRepository() {
   useEffect(() => {
     async function fetchRepositories() {
       try {
-        const response = await fetch(`https://api.github.com/users/${username}/repos`);
+        const response = await fetch(`${BASE_URL}${username}/repos`);
         if (!response.ok) throw new Error("Erro ao buscar repositórios");
 
         const data: Repo[] = await response.json();
