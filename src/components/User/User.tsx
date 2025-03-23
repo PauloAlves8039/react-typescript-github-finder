@@ -5,7 +5,7 @@ import classes from "./User.module.css";
 
 export default function User({ login, avatar_url, followers, following, location }: UserProps) {
     return (
-        <div className="animation-fade-in-downbig-1s">
+        <div className="animation-bounce-in-up-1s">
             <div className={classes.user}>
                 <img src={avatar_url} alt={login} />
                 <h2>{login}</h2>

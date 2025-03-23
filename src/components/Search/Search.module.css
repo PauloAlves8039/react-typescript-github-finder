@@ -28,11 +28,39 @@
 }
 
 .search_container button {
-    background-color: var(--green-color1);
+    background-color: var(--white-color1);
     cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.search_container button svg {
+    fill: var(--green-color1);
+    transition: fill 0.3s ease-in-out;
+}
+
+.search_container button:hover {
+    background-color: var(--green-color1); 
+}
+
+.search_container button:hover svg {
+    fill: var(--white-color1);
 }
 
 .search_container .clear_button {
-    background-color: var(--danger-color1);
+    background-color: var(--white-color1); 
     cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.search_container .clear_button svg {
+    fill: var(--danger-color1); 
+    transition: fill 0.3s ease-in-out;
+}
+
+.search_container .clear_button:hover {
+    background-color: var(--danger-color1);
+}
+
+.search_container .clear_button:hover svg {
+    fill: var(--white-color1);
 }

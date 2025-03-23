@@ -37,6 +37,16 @@ a {
     animation-duration: 1s;
 }
 
+.animation-bounce-in-up-1s {
+    animation: bounceInUp;
+    animation-duration: 1s;
+}
+
+.animation-pulse-1s {
+    animation: pulse;
+    animation-duration: 1s;
+}
+
 .animation-fade-in-downbig-1s {
     animation: fadeInDownBig;
     animation-duration: 1s;

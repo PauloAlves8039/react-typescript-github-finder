@@ -49,7 +49,9 @@ export default function ListRepository() {
   return (
     <div className="animation-fade-in-downbig-1s">
       <div className={classes.repository_container}>
+
         <h2>Repositórios de {username}</h2>
+
         <div className={classes.repo_list}>
           {repos.map((repo) => (
             <div key={repo.name} className={classes.repo_card}>
@@ -72,10 +74,10 @@ export default function ListRepository() {
         </div>
       </div>
 
-      <button className={classes.scroll_top} onClick={scrollToTop} aria-label="Voltar ao topo">
+      <button className={classes.scroll_top} onClick={scrollToTop} title="Voltar ao topo">
         <FaArrowUp />
       </button>
-      <button className={classes.go_back} onClick={goBack} aria-label="Voltar">
+      <button className={classes.go_back} onClick={goBack} title="Voltar">
         <FaArrowLeft />
       </button>
     </div>

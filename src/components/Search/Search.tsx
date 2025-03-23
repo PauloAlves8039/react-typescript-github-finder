@@ -64,7 +64,7 @@ export default function Search({loadUser}: SearchProps) {
                     </button>
                     <button onClick={resetPage}
                         title="Limpar"
-                        className={`${classes.clear_button} ${animateClear ? "animation-fade-in-downbig-1s" : ""}`}>
+                        className={`${classes.clear_button} ${animateClear ? "animation-pulse-1s" : ""}`}>
                         <AiOutlineClear />
                     </button>
                 </div>
