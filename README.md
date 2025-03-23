@@ -10,19 +10,26 @@
 
 ## :computer: Projeto
 
-Aplicação web para pesquisa de repositórios utilizando a [API do GitHub](https://docs.github.com/en/rest/users?apiVersion=2022-11-28).
+O GitHub Finder é uma aplicação web desenvolvida para facilitar a pesquisa de repositórios e usuários no GitHub, utilizando a [GitHub REST API](https://docs.github.com/en/rest/users?apiVersion=2022-11-28).
 
+A aplicação está hospedada na Vercel e pode ser acessada aqui: [GitHub Finder](https://github-finder-q2izez8f1-paulo-alves-projects.vercel.app/) 
 
-## ✔️ Recursos Utilizados
+## 🚀 Tecnologias e Ferramentas  
 
-- `HTML`
-- `CSS`
-- `TypeScript`
-- `React`
-- `React Router Dom`
-- `React Toastify`
-- `React Router Dom`
-- `Animate.css`
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:  
+
+- **Frontend:**  
+  - HTML5  
+  - CSS3  
+  - TypeScript  
+  - React  
+  - React Router DOM  
+  - React Toastify  
+  - Animate.css  
+
+- **Build e Deploy:**  
+  - Vite  
+  - Vercel  
 
 ## :floppy_disk: Clonar Repositório
 
