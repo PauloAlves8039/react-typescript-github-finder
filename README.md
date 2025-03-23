@@ -10,7 +10,7 @@
 
 ## :computer: Projeto
 
-Aplicação web para pesquisar repositórios no GitHub.
+Aplicação web para pesquisa de repositórios utilizando a [API do GitHub](https://docs.github.com/en/rest/users?apiVersion=2022-11-28).
 
 
 ## ✔️ Recursos Utilizados
@@ -19,12 +19,22 @@ Aplicação web para pesquisar repositórios no GitHub.
 - `CSS`
 - `TypeScript`
 - `React`
+- `React Router Dom`
+- `React Toastify`
+- `React Router Dom`
+- `Animate.css`
 
 ## :floppy_disk: Clonar Repositório
 
 ```bash
 git clone https://github.com/PauloAlves8039/react-typescript-github-finder.git
 ```
+
+## :camera: Screenshots
+
+<p align="center"> <img src="https://github.com/PauloAlves8039/react-typescript-github-finder/blob/master/src/assets/images/screenshot1.png?raw=true" /></p>
+<p align="center"> <img src="https://github.com/PauloAlves8039/react-typescript-github-finder/blob/master/src/assets/images/screenshot2.png?raw=true" /></p>
+<p align="center"> <img src="https://github.com/PauloAlves8039/react-typescript-github-finder/blob/master/src/assets/images/screenshot3.png?raw=true" /></p>
 
 <a href="https://github.com/PauloAlves8039"><img src="https://avatars.githubusercontent.com/u/57012714?v=4" width=70></a>
 [Paulo Alves](https://github.com/PauloAlves8039)
