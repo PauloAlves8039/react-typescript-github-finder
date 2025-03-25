@@ -17,10 +17,21 @@ export default function ListRepository() {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    if (!username) {
+      setError("Nome de usuário inválido.");
+      setLoading(false);
+      return;
+    }
+
     async function fetchRepositories() {
       try {
         const response = await fetch(`${BASE_URL}${username}/repos`);
-        if (!response.ok) throw new Error("Erro ao buscar repositórios");
+        if (!response.ok) {
+          if (response.status === 404) {
+            throw new Error("Usuário não encontrado.");
+          }
+          throw new Error("Erro ao buscar repositórios.");
+        }
 
         const data: Repo[] = await response.json();
         const sortedRepos = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
@@ -28,7 +39,12 @@ export default function ListRepository() {
         setRepos(sortedRepos);
       } catch (error) {
         console.error("Erro ao buscar repositórios:", error);
-        setError("Não foi possível carregar os repositórios.");
+
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError("Ocorreu um erro desconhecido.");
+        }
       } finally {
         setLoading(false);
       }
@@ -36,7 +52,7 @@ export default function ListRepository() {
 
     fetchRepositories();
   }, [username]);
-
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
