@@ -12,7 +12,7 @@
 
 O GitHub Finder é uma aplicação web desenvolvida para facilitar a pesquisa de repositórios e usuários no GitHub, utilizando a [GitHub REST API](https://docs.github.com/en/rest/users?apiVersion=2022-11-28).
 
-A aplicação está hospedada na Vercel e pode ser acessada aqui: [GitHub Finder](https://github-finder-seven-khaki.vercel.app/) 
+A aplicação está hospedada na Vercel e pode ser acessada aqui: [GitHub Finder](https://github-finder-jade-nine.vercel.app/) 
 
 ## 🚀 Tecnologias e Ferramentas  
 
