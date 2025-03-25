@@ -23,7 +23,9 @@ export default function ListRepository() {
         if (!response.ok) throw new Error("Erro ao buscar repositórios");
 
         const data: Repo[] = await response.json();
-        setRepos(data);
+        const sortedRepos = data.sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+        setRepos(sortedRepos);
       } catch (error) {
         console.error("Erro ao buscar repositórios:", error);
         setError("Não foi possível carregar os repositórios.");
